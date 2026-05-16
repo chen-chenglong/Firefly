@@ -7,13 +7,13 @@ const SITE_LANG = "zh_CN";
 
 export const siteConfig: SiteConfig = {
 	// 站点标题
-	title: "Firefly",
+	title: "积木好课",
 
 	// 站点副标题
-	subtitle: "Demo site",
+	subtitle: "技术创造价值",
 
 	// 站点 URL
-	site_url: "https://firefly.cuteleaf.cn",
+	site_url: "https://jimuhaoke.com",
 
 	// 站点描述
 	description:
