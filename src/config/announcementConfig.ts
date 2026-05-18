@@ -2,19 +2,19 @@ import type { AnnouncementConfig } from "../types/config";
 
 export const announcementConfig: AnnouncementConfig = {
 	// 公告标题
-	title: "公告",
+	title: "站点公告",
 
 	// 公告内容
-	content: "欢迎来到我的博客！这是一则示例公告。",
+	content: "欢迎来到积木好课，由Autodesk官方认证教师创办，研究生学历，12年一线软件经验。服务众多科研院所、高校、企业培训，一对一个人定制教学。",
 
 	// 是否允许用户关闭公告
-	closable: true,
+	closable: false,
 
 	link: {
 		// 启用链接
 		enable: true,
 		// 链接文本
-		text: "了解更多",
+		text: "联系我",
 		// 链接 URL
 		url: "/about/",
 		// 内部链接

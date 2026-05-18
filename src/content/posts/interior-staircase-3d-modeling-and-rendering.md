@@ -30,7 +30,7 @@ image: "https://cdn.jimuhaoke.com/2025/%E5%AE%A4%E5%86%85%E8%A3%85%E4%BF%AE%E6%A
 
 建模效果如下：
 
-![**AutoCAD建筑类室内楼梯**](https://cdn.jimuhaoke.com/2025/AutoCAD%E5%BB%BA%E7%AD%91%E7%B1%BB%E5%AE%A4%E5%86%85%E6%A5%BC%E6%A2%AF%20(2).webp)
+![AutoCAD建筑类室内楼梯](https://cdn.jimuhaoke.com/2025/AutoCAD%E5%BB%BA%E7%AD%91%E7%B1%BB%E5%AE%A4%E5%86%85%E6%A5%BC%E6%A2%AF%20(2).webp)
 
 **AutoCAD建筑类室内楼梯**
 
