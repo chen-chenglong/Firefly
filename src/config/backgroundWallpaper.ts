@@ -2,7 +2,7 @@ import type { BackgroundWallpaperConfig } from "@/types/config";
 
 export const backgroundWallpaper: BackgroundWallpaperConfig = {
 	// 壁纸模式："banner" 横幅壁纸，"fullscreen" 全屏壁纸，"overlay" 全屏透明，"none" 纯色背景无壁纸
-	mode: "banner",
+	mode: "none",
 	// 是否允许用户通过导航栏切换壁纸模式
 	// 且同时维护多种壁纸模式过于复杂（已经屎山代码），在切换时有时候可能会出现一些奇怪的过渡效果或者bug
 	// 推荐只选择自己喜欢的模式并关闭切换功能
@@ -56,7 +56,7 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 		// 主页横幅文字
 		homeText: {
 			// 是否启用主页横幅文字
-			enable: true,
+			enable: false,
 			// 是否允许用户通过控制面板切换横幅标题显示
 			switchable: false,
 			// 主页横幅主标题
@@ -111,14 +111,14 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 		gradient: {
 			enable: {
 				// 桌面端是否启用渐变过渡
-				desktop: true,
+				desktop: false,
 				// 移动端是否启用渐变过渡
-				mobile: true,
+				mobile: false,
 			},
 			// 渐变高度
 			height: "15vh",
 			// 是否允许用户通过控制面板切换渐变过渡
-			switchable: true,
+			switchable: false,
 		},
 	},
 	// Banner模式特有配置
