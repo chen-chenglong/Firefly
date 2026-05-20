@@ -20,27 +20,22 @@ links.push({
 		icon: "",
 		},
 		{
-				name: "GitHub",
-				url: "https://github.com/CuteLeaf/Firefly",
-				external: true,
-				icon: "fa7-brands:github",
-			},
-			);
-links.push({
-		name: "赞助",
-		url: "/sponsor",
-		icon: "",
-	});
-links.push({
-		name: "淘宝店铺",
-		url: "https://51yimucang.taobao.com/",
-		icon: "",
-	});
-	links.push({
-		name: "淘宝店铺",
-		url: "https://51yimucang.taobao.com/",
-		icon: "",
-	});
+			name: "赞助支持",
+			url: "/sponsor",
+			icon: "",
+		},
+		{
+			name: "联系站长",
+			url: "/about",
+			icon: "",
+		},
+		{
+			name: "淘宝店铺",
+			url: "https://51yimucang.taobao.com/",
+			external: true,
+			icon: "",
+		},
+		);
 	
 	// 仅返回链接，其它导航搜索相关配置在模块顶层常量中独立导出
 	return { links } as NavBarConfig;

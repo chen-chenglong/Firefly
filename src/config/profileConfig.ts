@@ -12,7 +12,7 @@ export const profileConfig: ProfileConfig = {
 	name: "积木好课",
 
 	// 个人签名
-	bio: "技术创造价值。\n掌握一项终身可用的技能！",
+	bio: "技术创造价值。<br />掌握一项终身可用的技能！",
 
 	// 链接配置
 	// 已经预装的图标集：fa7-brands，fa7-regular，fa7-solid，material-symbols，simple-icons
