@@ -62,7 +62,7 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			// 主页横幅主标题
 			title: "积木好课",
 			// 主页横幅主标题字体大小
-			titleSize: "3rem",
+			titleSize: "2rem",
 			// 主页横幅副标题
 			subtitle: [
 				"技术创造价值",

@@ -38,7 +38,7 @@ export const spineModelConfig: SpineModelConfig = {
 	// 交互配置
 	interactive: {
 		// 交互功能开关
-		enabled: true,
+		enabled: false,
 		// 点击时随机播放的动画列表
 		clickAnimations: [
 			"emoji_0",
