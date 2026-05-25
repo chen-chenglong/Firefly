@@ -10,25 +10,32 @@ export function removeFileExtension(id: string): string {
 }
 
 export function pathsEqual(path1: string, path2: string) {
-	const normalizedPath1 = path1.replace(/^\/|\/$/g, "").toLowerCase();
-	const normalizedPath2 = path2.replace(/^\/|\/$/g, "").toLowerCase();
+	const normalizedPath1 = path1.replace(/^\/?|\/?$/g, "").toLowerCase();
+	const normalizedPath2 = path2.replace(/^\/?|\/?$/g, "").toLowerCase();
 	return normalizedPath1 === normalizedPath2;
 }
 
 function joinUrl(...parts: string[]): string {
 	const joined = parts.join("/");
-	return joined.replace(/\/+/g, "/");
+	let normalized = joined.replace(/\/+/g, "/");
+	// 移除在查询参数前的斜杠，例如 "/archive/?q=1" -> "/archive?q=1"
+	normalized = normalized.replace(/\/?\?/, "?").replace(/\/?#/, "#");
+	// 去掉末尾的斜杠（保留单个根路径 "/"）
+	if (normalized.length > 1 && normalized.endsWith("/")) {
+		normalized = normalized.slice(0, -1);
+	}
+	return normalized;
 }
 
 export function getPostUrlBySlug(slug: string): string {
 	// 移除文件扩展名（如 .md, .mdx 等）
 	const slugWithoutExt = removeFileExtension(slug);
-	return url(`/posts/${slugWithoutExt}/`);
+	return url(`/blog/${slugWithoutExt}`);
 }
 
 export function getTagUrl(tag: string): string {
-	if (!tag) return url("/archive/");
-	return url(`/archive/?tag=${encodeURIComponent(tag.trim())}`);
+	if (!tag) return url("/archive");
+	return url(`/archive?q=${encodeURIComponent(tag.trim())}`);
 }
 
 export function getCategoryUrl(category: string | null): string {
@@ -37,8 +44,8 @@ export function getCategoryUrl(category: string | null): string {
 		category.trim() === "" ||
 		category.trim().toLowerCase() === i18n(I18nKey.uncategorized).toLowerCase()
 	)
-		return url("/archive/?uncategorized=true");
-	return url(`/archive/?category=${encodeURIComponent(category.trim())}`);
+		return url("/archive?uncategorized=true");
+	return url(`/archive?category=${encodeURIComponent(category.trim())}`);
 }
 
 export function getDir(path: string): string {
@@ -56,7 +63,7 @@ export function getFileDirFromPath(filePath: string): string {
 }
 
 export function getSearchUrl(query: string): string {
-	return url(`/search/?q=${encodeURIComponent(query.trim())}`);
+	return url(`/search?q=${encodeURIComponent(query.trim())}`);
 }
 
 export function url(path: string) {
