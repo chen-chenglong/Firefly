@@ -216,11 +216,12 @@ export const siteConfig: SiteConfig = {
 			// 是否开启网站录屏功能
 			screenRecord: true,
 		},
-	},
-
-	vercount: {
-		enable: true,
-		apiUrl: "https://events.vercount.one/js",
+		busuanzi: {
+			// 是否启用 Busuanzi 统计
+			enable: true,
+			// Busuanzi JS 地址
+			scriptUrl: "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js",
+		},
 	},
 
 	// 图像优化及响应式配置

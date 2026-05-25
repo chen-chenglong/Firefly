@@ -140,9 +140,9 @@ export type SiteConfig = {
 		};
 	};
 
-	vercount?: {
-		enable?: boolean; // 是否启用 Vercount 统计
-		apiUrl?: string; // Vercount API 基地址
+	busuanzi?: {
+		enable?: boolean; // 是否启用 Busuanzi 统计
+		scriptUrl?: string; // Busuanzi JS 地址
 	};
 
 	// 图片优化配置
