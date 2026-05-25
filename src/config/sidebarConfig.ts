@@ -62,7 +62,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 组件位置
 			position: "top",
 			// 仅在非文章详情页显示
-			showOnPostPage: false,
+			showOnPostPage: true,
 			showOnNonPostPage: true,
 		},
 		{
