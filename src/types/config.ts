@@ -140,6 +140,11 @@ export type SiteConfig = {
 		};
 	};
 
+	vercount?: {
+		enable?: boolean; // 是否启用 Vercount 统计
+		apiUrl?: string; // Vercount API 基地址
+	};
+
 	// 图片优化配置
 	imageOptimization?: {
 		/**

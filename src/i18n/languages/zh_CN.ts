@@ -253,7 +253,9 @@ export const zh_CN: Translation = {
 
 	// 站点统计
 	[Key.siteStats]: "站点统计",
-	[Key.siteStatsPostCount]: "文章",
+	[Key.siteStatsPostCount]: "文章总数",
+	[Key.siteStatsVisitorCount]: "访客总数",
+	[Key.siteStatsReadCount]: "阅读总数",
 	[Key.siteStatsCategoryCount]: "分类",
 	[Key.siteStatsTagCount]: "标签",
 	[Key.siteStatsTotalWords]: "总字数",

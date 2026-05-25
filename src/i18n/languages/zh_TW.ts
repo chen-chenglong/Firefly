@@ -255,7 +255,9 @@ export const zh_TW: Translation = {
 
 	// 站點統計
 	[Key.siteStats]: "站點統計",
-	[Key.siteStatsPostCount]: "文章",
+	[Key.siteStatsPostCount]: "文章總數",
+	[Key.siteStatsVisitorCount]: "訪客總數",
+	[Key.siteStatsReadCount]: "閱讀總數",
 	[Key.siteStatsCategoryCount]: "分類",
 	[Key.siteStatsTagCount]: "標籤",
 	[Key.siteStatsTotalWords]: "總字數",

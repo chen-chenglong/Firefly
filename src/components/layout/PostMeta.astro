@@ -5,6 +5,7 @@ import I18nKey from "@/i18n/i18nKey";
 import { i18n } from "@/i18n/translation";
 import { formatDateToYYYYMMDD } from "@/utils/date-utils";
 import { getCategoryUrl, getTagUrl } from "@/utils/url-utils";
+import { siteConfig } from "@/config";
 
 export interface Props {
 	published: Date;
@@ -22,6 +23,7 @@ export interface Props {
 	customPath?: string;
 	pinned?: boolean;
 	password?: boolean;
+	showVercount?: boolean;
 }
 
 const {
@@ -37,9 +39,11 @@ const {
 	showTags = true,
 	customPath,
 	pinned,
+	showVercount = false,
 } = Astro.props;
 
 const path = customPath || (id ? `/blog/${id}` : "");
+const vercountApiUrl = siteConfig.vercount?.apiUrl ?? "https://vercount.cn";
 ---
 
 <div
@@ -127,6 +131,22 @@ const path = customPath || (id ? `/blog/${id}` : "");
      )
    }
 
+  {
+    showVercount && id && (
+      <div class="flex items-center">
+        <div class="meta-icon">
+          <Icon name="material-symbols:visibility-outline-rounded" class="text-xl" />
+        </div>
+        <span class="text-50 text-sm font-medium mr-1">
+          {i18n(I18nKey.pageViews)}
+        </span>
+        <span class="text-50 text-sm font-medium vercount-pageview-count" data-path={path}>
+          {i18n(I18nKey.pageViewsLoading)}
+        </span>
+      </div>
+    )
+  }
+
   <!-- Twikoo访问量统计（首页不显示，且文章访问量统计启用时显示） -->
   {
     !isHome &&
@@ -170,7 +190,7 @@ const path = customPath || (id ? `/blog/${id}` : "");
     {
         !isHome &&
         commentConfig.type === 'artalk' &&
-        commentConfig.waline?.visitorCount &&
+        commentConfig.artalk?.visitorCount &&
         id && (
                     <div class="flex items-center">
                         <div class="meta-icon">
@@ -184,3 +204,68 @@ const path = customPath || (id ? `/blog/${id}` : "");
         )
     }
 </div>
+<script is:inline define:vars={{ vercountApiUrl, path }}>
+  async function fetchJson(url) {
+    try {
+      const resp = await fetch(url, { cache: "no-store" });
+      if (!resp.ok) return null;
+      return await resp.json();
+    } catch {
+      return null;
+    }
+  }
+
+  async function tryFetchVercountJson(urls) {
+    for (const url of urls) {
+      const json = await fetchJson(url);
+      if (json && typeof json === "object") {
+        return json;
+      }
+    }
+    return null;
+  }
+
+  function parseVercountPageCount(data) {
+    return Number(
+      data?.count ??
+        data?.pageViews ??
+        data?.views ??
+        data?.readCount ??
+        data?.readingCount ??
+        data?.hits ??
+        0,
+    );
+  }
+
+  async function updateVercountPageCount() {
+    const pagePath = path || window.location.pathname;
+    const baseUrl = vercountApiUrl.replace(/\/+$/g, "");
+    const urls = [
+      `${baseUrl}/api/page-count?path=${encodeURIComponent(pagePath)}`,
+      `${baseUrl}/api/pageview?path=${encodeURIComponent(pagePath)}`,
+      `${baseUrl}/api/page-view?path=${encodeURIComponent(pagePath)}`,
+      `${baseUrl}/api/page?path=${encodeURIComponent(pagePath)}`,
+      `${baseUrl}/api/count?path=${encodeURIComponent(pagePath)}`,
+      `${baseUrl}/page?path=${encodeURIComponent(pagePath)}`,
+      `${baseUrl}/count?path=${encodeURIComponent(pagePath)}`,
+      `${baseUrl}/hit?path=${encodeURIComponent(pagePath)}`,
+    ];
+
+    const data = await tryFetchVercountJson(urls);
+    if (!data) return;
+
+    const pageCount = parseVercountPageCount(data);
+    if (pageCount > 0) {
+      document.querySelectorAll(".vercount-pageview-count").forEach((el) => {
+        if (el.dataset.path === pagePath || !el.dataset.path) {
+          el.textContent = new Intl.NumberFormat().format(pageCount);
+        }
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", updateVercountPageCount);
+  document.addEventListener("swup:contentReplaced", () => {
+    setTimeout(updateVercountPageCount, 100);
+  });
+</script>
