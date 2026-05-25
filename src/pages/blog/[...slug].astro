@@ -1,4 +1,4 @@
----
+﻿---
 import { render } from "astro:content";
 import * as path from "node:path";
 import Comment from "@components/comment/index.astro";
@@ -34,7 +34,7 @@ import { url } from "@/utils/url-utils";
 export async function getStaticPaths() {
 	const blogEntries = await getSortedPosts();
 	return blogEntries.map((entry) => {
-		// 将 id 转换为 slug（移除扩展名）以匹配路由参数
+		// 灏?id 杞崲涓?slug锛堢Щ闄ゆ墿灞曞悕锛変互鍖归厤璺敱鍙傛暟
 		const slug = removeFileExtension(entry.id);
 		return {
 			params: { slug },
@@ -56,7 +56,7 @@ const bannerPostMeta = {
 	minutes: remarkPluginFrontmatter.minutes,
 };
 
-// 处理随机图：如果image为"api"，则从配置的API获取随机图
+// 澶勭悊闅忔満鍥撅細濡傛灉image涓?api"锛屽垯浠庨厤缃殑API鑾峰彇闅忔満鍥?
 const processedImage = processCoverImageSync(entry.data.image, entry.id);
 const apiUrls = getApiUrlList(entry.data.image, entry.id);
 
@@ -84,7 +84,7 @@ if (processedImage) {
 	}
 }
 
-// 处理头像URL
+// 澶勭悊澶村儚URL
 let posterAvatarUrl: string | null = profileConfig.avatar || null;
 if (posterAvatarUrl) {
 	const isLocalAvatar = !(
@@ -142,7 +142,7 @@ const relatedPosts = await getRelatedPosts(entry, 5);
   headings={headings}
   bannerPostMeta={bannerPostMeta}
 >
-  <!-- KaTeX 按需加载 - 仅在文章页面 -->
+  <!-- KaTeX 鎸夐渶鍔犺浇 - 浠呭湪鏂囩珷椤甸潰 -->
   <KatexManager slot="head" />
   
   <script
@@ -161,52 +161,6 @@ const relatedPosts = await getRelatedPosts(entry, 5);
         {},
       ]}
     >
-      <!-- word count and reading time -->
-      <div
-        class="flex flex-row text-black/30 dark:text-white/30 gap-5 mb-3 transition onload-animation"
-      >
-        <div class="flex flex-row items-center">
-          <div
-            class="transition h-6 w-6 rounded-md bg-black/5 dark:bg-white/10 text-black/50 dark:text-white/50 flex items-center justify-center mr-2"
-          >
-            <Icon name="material-symbols:notes-rounded" />
-          </div>
-          <div class="text-sm">
-            {remarkPluginFrontmatter.words}
-            {" " + i18n(I18nKey.wordsCount)}
-          </div>
-        </div>
-        <div class="flex flex-row items-center">
-          <div
-            class="transition h-6 w-6 rounded-md bg-black/5 dark:bg-white/10 text-black/50 dark:text-white/50 flex items-center justify-center mr-2"
-          >
-            <Icon name="material-symbols:schedule-outline-rounded" />
-          </div>
-          <div class="text-sm">
-            {remarkPluginFrontmatter.minutes}
-            {
-              " " +
-                i18n(
-                  remarkPluginFrontmatter.minutes === 1
-                    ? I18nKey.minuteCount
-                    : I18nKey.minutesCount
-                )
-            }
-          </div>
-        </div>
-        {entry.data.password && (
-          <div class="flex flex-row items-center">
-            <div
-              class="transition h-6 w-6 rounded-md bg-black/5 dark:bg-white/10 text-black/50 dark:text-white/50 flex items-center justify-center mr-2"
-            >
-              <Icon name="material-symbols:lock-outline" />
-            </div>
-            <div class="text-sm">
-              {i18n(I18nKey.postEncrypted)}
-            </div>
-          </div>
-        )}
-      </div>
 
       <!-- title -->
       <div class="relative onload-animation">
@@ -264,7 +218,7 @@ const relatedPosts = await getRelatedPosts(entry, 5);
             <Content />
           </Markdown>
 
-          {/* 赞助按钮 & 分享按钮 */}
+          {/* 璧炲姪鎸夐挳 & 鍒嗕韩鎸夐挳 */}
           {
             (siteConfig.sharePoster || (sponsorConfig.showButtonInPost && siteConfig.pages.sponsor)) && (
               <div class="mb-6 rounded-xl onload-animation">
@@ -352,7 +306,7 @@ const relatedPosts = await getRelatedPosts(entry, 5);
             <Content />
           </Markdown>
 
-          {/* 赞助按钮 & 分享按钮 */}
+          {/* 璧炲姪鎸夐挳 & 鍒嗕韩鎸夐挳 */}
           {
             (siteConfig.sharePoster || (sponsorConfig.showButtonInPost && siteConfig.pages.sponsor)) && (
               <div class="mb-6 rounded-xl onload-animation">
@@ -438,14 +392,14 @@ const relatedPosts = await getRelatedPosts(entry, 5);
     </div>
   </div>
 
-  <!-- 上次编辑时间 -->
+  <!-- 涓婃缂栬緫鏃堕棿 -->
   {
     siteConfig.showLastModified && (() => {
       const lastModified = dayjs(entry.data.updated || entry.data.published);
       const dateStr = lastModified.format("YYYY-MM-DD");
       const outdatedThreshold = siteConfig.outdatedThreshold ?? 1;
 
-      // 1. 預設加上 hidden 隱藏，並把時間與閾值綁在 data-* 屬性
+      // 1. 闋愯ō鍔犱笂 hidden 闅辫棌锛屼甫鎶婃檪闁撹垏闁惧€肩秮鍦?data-* 灞€?
       return (
         <div 
           id="outdated-card" 
@@ -482,19 +436,19 @@ const relatedPosts = await getRelatedPosts(entry, 5);
     const card = document.getElementById('outdated-card');
     
     if (card) {
-      // 讀取伺服器給的日期，並用 dayjs 直接算出差異天數
+      // 璁€鍙栦己鏈嶅櫒绲︾殑鏃ユ湡锛屼甫鐢?dayjs 鐩存帴绠楀嚭宸暟澶╂暩
       const lastModified = dayjs(card.dataset.date);
       const daysDiff = dayjs().diff(lastModified, "day");
       const threshold = Number(card.dataset.threshold);
 
-      // 如果超過閾值，就顯示卡片與提示文字
+      // 濡傛灉瓒呴亷闁惧€硷紝灏遍’绀哄崱鐗囪垏鎻愮ず鏂囧瓧
       if (daysDiff >= threshold) {
         card.classList.remove('hidden');
 
         if (daysDiff >= 1) {
           const textEl = document.getElementById('days-ago-text');
           if (textEl && textEl.dataset.template) {
-            textEl.textContent = `，${textEl.dataset.template.replace("{days}", daysDiff.toString())}`;
+            textEl.textContent = `锛?{textEl.dataset.template.replace("{days}", daysDiff.toString())}`;
           }
           
           const warningEl = document.getElementById('outdated-warning');
@@ -542,6 +496,6 @@ const relatedPosts = await getRelatedPosts(entry, 5);
 
   <RecommendedPost relatedPosts={relatedPosts} currentPostId={entry.id} />
 
-  <!-- 评论 -->
+  <!-- 璇勮 -->
   {entry.data.comment && !entry.data.password && <Comment post={entry} />}
 </MainGridLayout>

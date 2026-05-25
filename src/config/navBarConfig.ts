@@ -20,7 +20,33 @@ links.push({
 		icon: "",
 		},
 		{
-			name: "赞助支持",
+		name: "AutoCAD课程",
+		url: "",
+		icon: "",
+		// 子菜单
+		children: [
+			{
+				name: "CAD二维基础课程",
+				url: "/blog/autocad-2d-drafting-course",
+				external: false,
+				icon: "",
+			},
+			{
+				name: "CAD三维建模课程",
+				url: "/blog/autocad-3d-modeling-course",
+				external: false,
+				icon: "",
+			},
+			{
+				name: "CAD高级渲染课程",
+				url: "/blog/autocad-advanced-rendering-course",
+				external: false,
+				icon: "",
+			},
+		],
+		},
+		{
+			name: "赞助",
 			url: "/sponsor",
 			icon: "",
 		},
