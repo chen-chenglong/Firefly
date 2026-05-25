@@ -138,8 +138,8 @@ const path = customPath || (id ? `/blog/${id}` : "");
         <span class="text-50 text-sm font-medium mr-1">
           {i18n(I18nKey.pageViews)}
         </span>
-        <span class="text-50 text-sm font-medium busuanzi_value_page_pv" data-path={path}>
-          {i18n(I18nKey.pageViewsLoading)}
+        <span id="busuanzi_container_page_pv" class="text-50 text-sm font-medium">
+          <span id="busuanzi_value_page_pv">{i18n(I18nKey.pageViewsLoading)}</span>
         </span>
       </div>
     )

@@ -125,14 +125,6 @@ const siteLang = lang.replace("_", "-");
             />
     )}
 
-    {siteConfig.analytics?.busuanzi?.enable && (
-      <script
-        data-swup-ignore-script
-        async
-        src={siteConfig.analytics.busuanzi.scriptUrl ?? "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"}
-      ></script>
-    )}
-
     <title>{pageTitle}</title>
     <meta
       name="description"
@@ -601,6 +593,14 @@ const siteLang = lang.replace("_", "-");
 
     <!-- Fancybox Manager -->
     <FancyboxManager />
+
+    {siteConfig.analytics?.busuanzi?.enable && (
+      <script
+        data-swup-ignore-script
+        async
+        src={siteConfig.analytics.busuanzi.scriptUrl ?? "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"}
+      ></script>
+    )}
   </body>
 </html>
 
