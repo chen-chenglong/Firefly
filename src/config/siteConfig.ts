@@ -220,7 +220,7 @@ export const siteConfig: SiteConfig = {
 
 	vercount: {
 		enable: true,
-		apiUrl: "https://vercount.cn",
+		apiUrl: "https://events.vercount.one/js",
 	},
 
 	// 图像优化及响应式配置

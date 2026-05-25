@@ -13,7 +13,7 @@ interface Props {
 
 const { class: className, style } = Astro.props;
 const posts = await getSortedPosts();
-const vercountApiUrl = siteConfig.vercount?.apiUrl ?? "https://vercount.cn";
+const vercountApiUrl = siteConfig.vercount?.apiUrl ?? "https://events.vercount.one/js";
 
 function formatNumber(num: number): string {
 	return num.toLocaleString();
