@@ -15,11 +15,6 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 		LinkPreset.Home,
 	];
 links.push({
-		name: "全部文章",
-		url: "/archive",
-		icon: "",
-		},
-		{
 		name: "AutoCAD课程",
 		url: "",
 		icon: "",
