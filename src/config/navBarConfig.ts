@@ -42,6 +42,11 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 		],
 		},
 		{
+			name: "留言板",
+			url: "/guestbook/",
+			icon: "",
+		},
+		{
 			name: "联系站长",
 			url: "/about/",
 			icon: "",
