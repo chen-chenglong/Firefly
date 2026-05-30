@@ -48,7 +48,7 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 		},
 		{
 			name: "留言区",
-			url: "/comment/",
+			url: "/guestbook/",
 			icon: "",
 		},
 		{
