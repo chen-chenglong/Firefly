@@ -124,15 +124,15 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 组件类型：日历组件
 			type: "calendar",
 			// 是否启用该组件
-			enable: false,
+			enable: true,
 			// 组件位置
 			position: "sticky",
 			// 是否在文章详情页显示
-			showOnPostPage: false,
+			showOnPostPage: true,
 			// 响应式配置
 			responsive: {
 				// 是否显示年度文章热力图
-				showHeatmap: false,
+				showHeatmap: true,
 			},
 		},
 		{
