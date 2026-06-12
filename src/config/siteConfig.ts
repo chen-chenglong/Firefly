@@ -1,5 +1,4 @@
-import type { SiteConfig } from "@/types/config";
-import { fontConfig } from "./fontConfig";
+import type { SiteConfig } from "@/types/siteConfig";
 
 // 定义站点语言
 // 语言代码，例如：'zh_CN', 'zh_TW', 'en', 'ja', 'ru'。
@@ -70,7 +69,7 @@ export const siteConfig: SiteConfig = {
 		// 支持三种类型：
 		// 1. Astro图标库: { type: "icon", value: "material-symbols:home-pin-outline" }
 		// 2. 本地图片（public目录，不优化）: { type: "image", value: "/assets/images/logo.webp", alt: "Logo" }
-		// 3. 本地图片（src目录，自动优化但会增加构建时间，推荐）: { type: "image", value: "assets/images/logo.webp", alt: "Logo" }
+		// 3. 本地图片（src目录，自动优化但会增加构建时间）: { type: "image", value: "assets/images/logo.webp", alt: "Logo" }
 		// 4. 网络图片: { type: "url", value: "https://example.com/logo.png", alt: "Logo" }
 		logo: {
 			type: "image",
@@ -125,7 +124,7 @@ export const siteConfig: SiteConfig = {
 	},
 
 	// 页面开关配置 - 控制特定页面的访问权限，设为false会返回404
-	// bangumi的数据为编译时获取的，所以不是实时数据，请配置bangumi.userId
+	// 关闭后请前往src/config/navBarConfig.ts中手动移除对应页面的导航栏链接
 	pages: {
 		// 友链页面开关
 		friends: false,
@@ -161,6 +160,44 @@ export const siteConfig: SiteConfig = {
 			// 网格模式卡片最小宽度(px)，浏览器根据容器宽度自动计算列数
 			columnWidth: 320,
 		},
+	},
+
+	// 文章内容页配置
+	post: {
+		// 提醒框（Admonitions）配置，修改后需要重启开发服务器才能生效
+		// 主题：'github' | 'obsidian' | 'vitepress'，每个主题风格和语法不同，可根据喜好选择
+		rehypeCallouts: {
+			theme: "github",
+			// 是否启用兼容 Python-Markdown 风格的 admonition 语法（!!!和???语法）
+			// 注意：只有 theme 配置成 obsidian 主题才能基本支持这些语法，其他主题会有样式问题或不兼容的情况
+			enablePythonMarkdownAdmonitions: false,
+		},
+		// 文章页底部的"上次编辑时间"卡片开关
+		showLastModified: true,
+		// 文章过期阈值（天数），超过此天数才显示"上次编辑"卡片
+		outdatedThreshold: 30,
+		// 是否开启分享海报生成功能
+		sharePoster: true,
+		// OpenGraph图片功能，注意开启后要渲染很长时间，不建议本地调试的时候开启
+		generateOgImages: false,
+	},
+
+	// bangumi配置
+	bangumi: {
+		// Bangumi用户ID
+		userId: "1143164",
+		// 数据模式：static=构建时获取，dynamic=客户端实时获取
+		// static 模式在构建时获取数据并静态渲染，部署后数据不更新
+		// dynamic 模式在浏览器中实时请求 API，始终显示最新数据
+		mode: "dynamic",
+		// Bangumi API 地址
+		apiUrl: "https://api.bangumi.one",
+		// 详情页地址
+		subjectBaseUrl: "https://bangumi.one/subject/",
+		// 条目类型排序，数组中的类型将按顺序优先展示
+		// 可选值: "anime" | "book" | "music" | "game" | "real" (暂不支持"real"类型)
+		// 未列出的类型将按默认顺序排在后面
+		categoryOrder: ["anime", "book", "music", "game"],
 	},
 
 	// 分页配置
@@ -236,10 +273,6 @@ export const siteConfig: SiteConfig = {
 		// 可解决指定域名图片加载时的 403 问题（如防盗链图片）
 		noReferrerDomains: [],
 	},
-
-	// 字体配置
-	// 在src/config/fontConfig.ts中配置具体字体
-	font: fontConfig,
 
 	// 站点语言，在本配置文件顶部SITE_LANG定义
 	lang: SITE_LANG,
