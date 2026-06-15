@@ -1,0 +1,93 @@
+---
+/**
+ * BusuanziAnalytics.astro
+ *
+ * 不蒜子静态站点计数器，针对加载性能做了以下优化：
+ *
+ * 1. 懒加载 —— 用 IntersectionObserver 监视页脚区域，
+ *    只有页脚滚入视口时才注入 busuanzi 脚本，首屏零开销。
+ * 2. 脚本去重 —— 通过 data-busuanzi-loaded 标记避免同一页面
+ *    多次注入（兼容 Swup 客户端路由）。
+ * 3. Swup 兼容 —— 监听 swup:contentReplaced，切页后重新
+ *    观察新 DOM 里的页脚，自动重拉数据。
+ *
+ * 显示节点（放在 FooterConfig.html 或任意位置即可）：
+ *   <span id="busuanzi_value_site_uv">...</span>  — 总访客数
+ *   <span id="busuanzi_value_site_pv">...</span>  — 总阅读量
+ */
+---
+
+<script is:inline>
+(function () {
+  // ─── 常量 ─────────────────────────────────────────────────
+  var SCRIPT_SRC = "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js";
+  var LOADED_ATTR = "data-busuanzi-loaded";
+  var OBSERVER_ATTR = "data-busuanzi-observed";
+
+  // ─── 注入脚本（仅一次） ──────────────────────────────────
+  function injectScript() {
+    if (document.querySelector("script[" + LOADED_ATTR + "]")) return;
+    var s = document.createElement("script");
+    s.async = true;
+    s.defer = true;
+    s.setAttribute(LOADED_ATTR, "1");
+    s.src = SCRIPT_SRC;
+    document.head.appendChild(s);
+  }
+
+  // ─── 重置数字占位符 ──────────────────────────────────────
+  function resetCounters() {
+    ["busuanzi_value_site_uv", "busuanzi_value_site_pv"].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.innerHTML = "";
+    });
+  }
+
+  // ─── 用 IntersectionObserver 懒加载 ─────────────────────
+  function observeFooter() {
+    // 找页脚里的计数节点作为观察目标（任意一个即可）
+    var target = document.getElementById("busuanzi_value_site_uv")
+               || document.getElementById("busuanzi_value_site_pv");
+
+    if (!target) return; // FooterConfig 未开启时跳过
+
+    // 避免对同一节点重复绑定
+    if (target.hasAttribute(OBSERVER_ATTR)) return;
+    target.setAttribute(OBSERVER_ATTR, "1");
+
+    if (!("IntersectionObserver" in window)) {
+      // 降级：浏览器不支持时直接注入
+      injectScript();
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          injectScript();
+          observer.disconnect();
+        }
+      });
+    }, { rootMargin: "200px" }); // 提前 200 px 预加载，用户感知为即时
+
+    observer.observe(target);
+  }
+
+  // ─── Swup 切页处理 ───────────────────────────────────────
+  // 切页后 DOM 被替换：旧节点消失 → 重置数字 → 重新绑定观察
+  document.addEventListener("swup:contentReplaced", function () {
+    requestAnimationFrame(function () {
+      resetCounters();
+      observeFooter();
+      // 若脚本已存在，busuanzi 内部会自动重新回填
+    });
+  });
+
+  // ─── 首次加载 ────────────────────────────────────────────
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", observeFooter);
+  } else {
+    observeFooter();
+  }
+})();
+</script>
