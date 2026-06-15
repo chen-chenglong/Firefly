@@ -119,7 +119,8 @@ const siteLang = lang.replace("_", "-");
             screenRecord={analyticsConfig.la51Analytics?.screenRecord}
             />
     )}
-
+<!-- 不蒜子计数器：懒加载，页脚滚入视口时才拉取，首屏零性能开销 -->
+    <BusuanziAnalytics />
     <title>{pageTitle}</title>
     <meta
       name="description"
