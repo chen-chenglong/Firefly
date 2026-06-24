@@ -109,16 +109,19 @@ export const LinkPresets: Record<string, NavBarLink> = {
 		name: "友链",
 		url: "/friends/",
 		icon: "material-symbols:group",
+		pageKey: "friends",
 	},
 	Sponsor: {
-		name: "赞助",
+		name: "打赏",
 		url: "/sponsor/",
 		icon: "material-symbols:favorite",
+		pageKey: "sponsor",
 	},
 	Guestbook: {
 		name: "留言",
 		url: "/guestbook/",
 		icon: "material-symbols:chat",
+		pageKey: "guestbook",
 	},
 	About: {
 		name: "关于我",
@@ -129,11 +132,19 @@ export const LinkPresets: Record<string, NavBarLink> = {
 		name: "番组计划",
 		url: "/bangumi/",
 		icon: "material-symbols:movie",
+		pageKey: "bangumi",
 	},
 	Gallery: {
 		name: "相册",
 		url: "/gallery/",
 		icon: "material-symbols:photo-library",
+		pageKey: "gallery",
+	},
+	Anime: {
+		name: "追番",
+		url: "/anime/",
+		icon: "material-symbols:live-tv",
+		pageKey: "anime",
 	},
 };
 

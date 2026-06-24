@@ -123,12 +123,11 @@ export const siteConfig: SiteConfig = {
 		categoryOrder: ["anime", "book", "music", "game"],
 	},
 
-	// 页面开关配置 - 控制特定页面的访问权限，设为false会返回404
-	// 关闭后请前往src/config/navBarConfig.ts中手动移除对应页面的导航栏链接
+	// 页面开关配置 - 控制特定页面的访问权限，设为false会返回404并自动隐藏对应的导航栏菜单项
 	pages: {
 		// 友链页面开关
 		friends: false,
-		// 赞助页面开关
+		// 打赏页面开关
 		sponsor: false,
 		// 留言板页面开关，需要配置评论系统
 		guestbook: true,
@@ -136,6 +135,8 @@ export const siteConfig: SiteConfig = {
 		bangumi: false,
 		// 相册页面开关
 		gallery: false,
+		// 追番页面开关
+		anime: false,
 	},
 
 	// 分类导航栏开关，在首页和归档页顶部显示分类快捷导航
@@ -168,7 +169,7 @@ export const siteConfig: SiteConfig = {
 	// 文章内容页配置
 	post: {
 		// 提醒框（Admonitions）配置，修改后需要重启开发服务器才能生效
-		// 主题：'github' | 'obsidian' | 'vitepress'，每个主题风格和语法不同，可根据喜好选择
+		// 主题：'github' | 'obsidian' | 'vitepress' | 'docusaurus'，每个主题风格和语法不同，可根据喜好选择
 		rehypeCallouts: {
 			theme: "github",
 			// 是否启用兼容 Python-Markdown 风格的 admonition 语法（!!!和???语法）
@@ -178,7 +179,7 @@ export const siteConfig: SiteConfig = {
 		// 文章页底部的"上次编辑时间"卡片开关
 		showLastModified: true,
 		// 文章过期阈值（天数），超过此天数才显示"上次编辑"卡片
-		outdatedThreshold: 30,
+		outdatedThreshold: 9999,
 		// 是否开启分享海报生成功能
 		sharePoster: true,
 		// OpenGraph图片功能，注意开启后要渲染很长时间，不建议本地调试的时候开启
@@ -194,13 +195,29 @@ export const siteConfig: SiteConfig = {
 		// dynamic 模式在浏览器中实时请求 API，始终显示最新数据
 		mode: "dynamic",
 		// Bangumi API 地址
-		apiUrl: "https://api.bangumi.one",
+		apiUrl: "https://bgmapi.anibt.net",
 		// 详情页地址
-		subjectBaseUrl: "https://bangumi.one/subject/",
+		subjectBaseUrl: "https://bgmmi.anibt.net/subject/",
 		// 条目类型排序，数组中的类型将按顺序优先展示
 		// 可选值: "anime" | "book" | "music" | "game" | "real" (暂不支持"real"类型)
 		// 未列出的类型将按默认顺序排在后面
 		categoryOrder: ["anime", "book", "music", "game"],
+	},
+
+	// 追番配置（Bilibili + TMDB）
+	anime: {
+		// Bilibili 配置
+		bilibili: {
+			// 你的 Bilibili 用户 UID
+			uid: "38932988",
+		},
+		// TMDB 配置（可选，需要翻墙）
+		// tmdb: {
+		//   // TMDB API 密钥
+		//   apiKey: "your_tmdb_api_key",
+		//   // TMDB 列表 ID
+		//   listId: "your_list_id",
+		// },
 	},
 
 	// 分页配置
@@ -274,7 +291,7 @@ export const siteConfig: SiteConfig = {
 		// 为特定域名的图片添加 referrerpolicy="no-referrer" 属性
 		// 支持通配符 *，例如：["i0.hdslb.com", "*.bilibili.com"]
 		// 可解决指定域名图片加载时的 403 问题（如防盗链图片）
-		noReferrerDomains: [],
+		noReferrerDomains: ["*.hdslb.com", "*.bilibili.com"],
 	},
 
 	// 站点语言，在本配置文件顶部SITE_LANG定义
