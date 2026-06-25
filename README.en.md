@@ -8,7 +8,7 @@
 > 
 > ![Node.js >= 22](https://img.shields.io/badge/node.js-%3E%3D22-brightgreen) 
 ![pnpm >= 9](https://img.shields.io/badge/pnpm-%3E%3D9-blue)
-![Astro](https://img.shields.io/badge/Astro-6.4.4-orange)
+![Astro](https://img.shields.io/badge/Astro-7.0.2-orange)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9.2-blue)
 >
 > [![Stars](https://img.shields.io/github/stars/CuteLeaf/Firefly?style=social)](https://github.com/CuteLeaf/Firefly/stargazers)
@@ -43,6 +43,11 @@
 🔧 Highly Configurable: Most features can be customized through configuration files
 
 <img alt="firefly" src="./docs/images/1.webp" />
+<div style="display: flex; gap: 10px;">
+  <img src="./docs/images/3.webp" style="width: 33%;">
+  <img src="./docs/images/2.webp" style="width: 33%;">
+  <img src="./docs/images/4.webp" style="width: 33%;">
+</div>
 <img alt="Lighthouse" src="./docs/images/Lighthouse.png" />
 
 >[!TIP]
