@@ -5,7 +5,7 @@ description: Fusion360最新版下载和安装激活教程，解决无法下载�
 tags: [fusion, fusion 360]
 category: 软件安装
 draft: false
-image: "cover.webp"
+image: "/assets/images/postcover/download-fusion.webp"
 ---
 Fusion360最新版下载和安装激活教程
 ## 下载步骤：
