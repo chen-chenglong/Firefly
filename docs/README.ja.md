@@ -43,12 +43,19 @@
 
 🔧 高度にカスタマイズ可能：ほとんどの機能モジュールは設定ファイルでカスタマイズ可能
 
-<img alt="firefly" src="./images/1.webp" />
-<div style="display: flex; gap: 10px;">
-  <img src="./images/3.webp" style="width: 33%;">
-  <img src="./images/2.webp" style="width: 33%;">
-  <img src="./images/4.webp" style="width: 33%;">
-</div>
+<table width="100%" align="center">
+  <tr>
+    <td colspan="3" align="center">
+      <img src="./images/1.webp" >
+      <br>バナーモード</td>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><img src="./images/3.webp" width="300"><br>オーバーレイモード</td>
+    <td align="center"><img src="./images/2.webp" width="300"><br>全画面壁紙モード</td>
+    <td align="center"><img src="./images/4.webp" width="300"><br>ソリッドカラーモード</td>
+  </tr>
+</table>
 <img alt="Lighthouse" src="./docs/images/Lighthouse.png" />
 
 >[!TIP]
