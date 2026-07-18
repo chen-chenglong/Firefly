@@ -6,7 +6,7 @@ tags: [学习服务, 积木好课]
 category: 学习服务
 draft: false
 pinned: true
-image: "https://cdn.jimuhaoke.com/img/%E5%AD%A6%E5%91%98%E6%89%8B%E5%86%8C.webp"
+image: "/posts/new-student-handbook/cover.webp"
 ---
 
 ### 🎉欢迎新朋友的到来
@@ -17,36 +17,11 @@ image: "https://cdn.jimuhaoke.com/img/%E5%AD%A6%E5%91%98%E6%89%8B%E5%86%8C.webp"
 阅读后学习上基本不会再有问题。
 
 ### 📝技术答疑：
-如果需要技术答疑，请添加老师：
+我们提供终身免费的真人技术答疑，请添加微信老师：
 
-站长微信号：17685701141
+站长微信号：17353351800
 
-或者微信扫一扫添加加好友
-
-![微信扫码加好友](https://cdn.jimuhaoke.com/img/%E7%AB%99%E9%95%BF%E5%BE%AE%E4%BF%A1.webp)
-
-添加微信好友时请注明来源说明目的，谢谢。
-
-**自愿添加，不需要答疑的可以忽略。**
-
-微信公众号防止失联，如果哪天找不到老师的联系方式了，可以通过这个微信公众号找到：
-
-公众号名称：陈成龙
-
-![积木好课微信公众号](/assets/images/public-wechat.webp)
-
-### 📥下载软件：
-如果您已经安装了2016或更高版本AutoCAD，无需安装其他版本，直接学习即可，
-
-如果没有AutoCAD软件，请按照个人喜好结合自己的电脑硬件性能进行选择：
-
-[**AutoCAD2016****~****2019简体中文版下载**](https://jimuhaoke.com/posts/download-autocad-2016-2019/)
-
-[**AutoCAD2020****~****2026简体中文版下载**](https://jimuhaoke.com/posts/download-autocad-2020-2026/)  
-
-[**AutoCAD2027简体中文版下载**](https://jimuhaoke.com/posts/download-setup-autocad2027/)  
-
-安装视频请查看课程最前面的章节。
+**自愿添加，不需要答疑的可以不加。**
 
 ### 💻观看课程：
 课程在电脑、手机、平板均可以永久观看。
@@ -70,12 +45,25 @@ image: "https://cdn.jimuhaoke.com/img/%E5%AD%A6%E5%91%98%E6%89%8B%E5%86%8C.webp"
 
 方法2：打开淘宝最上方的：更多频道-淘宝教育（没有显示淘宝教育的可以直接搜索进入，进入一次后就会显示在最前面）
 
-如果还是不会操作，可以直接问老师。
+如果还是不会操作，可以直接问老师。  
+
+### 📥下载软件：
+如果您已经安装了2016或更高版本AutoCAD，无需安装其他版本，直接学习即可，
+
+如果没有AutoCAD软件，请按照个人喜好结合自己的电脑硬件性能进行选择：
+
+[**AutoCAD2016****~****2019简体中文版下载**](https://jimuhaoke.com/posts/download-autocad-2016-2019/)
+
+[**AutoCAD2020****~****2026简体中文版下载**](https://jimuhaoke.com/posts/download-autocad-2020-2026/)  
+
+[**AutoCAD2027简体中文版下载**](https://jimuhaoke.com/posts/download-setup-autocad2027/)  
+
+安装视频请查看课程最前面的章节。
 
 ### 💯好评支持：
 期待您的5星好评，这是我们坚持做好课程和服务的动力！谢谢。
 
-### 相关学习：
+### 了解其他相关学习：
 AutoCAD二维制图课程：
 
 [https://jimuhaoke.com/posts/autocad-2d-drafting-course/](https://jimuhaoke.com/posts/autocad-2d-drafting-course/)
