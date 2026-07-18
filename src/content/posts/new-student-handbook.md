@@ -6,7 +6,7 @@ tags: [学习服务, 积木好课]
 category: 学习服务
 draft: false
 pinned: true
-image: "/posts/new-student-handbook/cover.webp"
+image: "/post/new-student-handbook/cover.webp"
 ---
 
 ### 🎉欢迎新朋友的到来
@@ -19,9 +19,9 @@ image: "/posts/new-student-handbook/cover.webp"
 ### 📝技术答疑：
 我们提供终身免费的真人技术答疑，请添加微信老师：
 
-站长微信号：17353351800
+站长微信号：**17353351800**
 
-**自愿添加，不需要答疑的可以不加。**
+自愿添加，不需要答疑的可以不加。
 
 ### 💻观看课程：
 课程在电脑、手机、平板均可以永久观看。
@@ -42,6 +42,8 @@ image: "/posts/new-student-handbook/cover.webp"
 【2】使用手机淘宝App观看：
 
 方法1：我的淘宝-我的订单-更多：开始学习
+
+![手机淘宝观看方式](/post/new-student-handbook/taobao.webp)
 
 方法2：打开淘宝最上方的：更多频道-淘宝教育（没有显示淘宝教育的可以直接搜索进入，进入一次后就会显示在最前面）
 
