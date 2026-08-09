@@ -48,11 +48,6 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 		],
 		},
 		{
-			name: "留言板",
-			url: "/guestbook/",
-			icon: "",
-		},
-		{
 			name: "联系站长",
 			url: "/about/",
 			icon: "",
@@ -63,15 +58,6 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 			external: true,
 			icon: "",
 		},);
-
-	// 文档链接
-	// links.push({
-	// 	name: "文档",
-	// 	url: "https://docs-firefly.cuteleaf.cn",
-	// 	external: true,
-	// 	icon: "material-symbols:docs",
-	// });
-
 	return { links } as NavBarConfig;
 };
 

@@ -1,6 +1,6 @@
 ---
 title: 全网最全AutoCAD字体大全彻底解决shx字体缺失问题
-published: 2026-04-10
+published: 2026-08-9
 description: 纯手工整理超2000多个shx字体，删除错误和无法使用的字体，保留正确可以识别的shx字体，CAD工作必备，彻底解决AutoCAD字体缺失问题。
 tags: [CAD字体, shx字体]
 category: 技术文档
@@ -59,17 +59,12 @@ XYJ.SHX、XYKFO2.SHX、XYKJO2.SHX、XYSTEEL.SHX、XZKJO2.SHX、y1.shx、Y1F.SHX�
 
 ### **字体下载地址：**
 
-链接：为防止链接再次失效
-
 请关注微信公众号，回复关键词：shx
 
-即可获取下载链接，如需帮助公众号内私信老师即可。
+即可获取下载链接。
 
-公众号名称：陈成龙
+![微信扫码关注公众号](/assets/images/public-wechat.webp)
 
-![微信扫码关注积木好课公众号](/assets/images/public-wechat.webp)
-
-微信扫码关注积木好课公众号
 
 ### 相关学习：
 
