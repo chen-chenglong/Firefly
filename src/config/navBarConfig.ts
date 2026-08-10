@@ -32,7 +32,6 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 			LinkPresets.Tags,
 		],
 	});
-	});
 
 	// 我的及其子菜单
 	links.push({
