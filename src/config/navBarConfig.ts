@@ -56,7 +56,6 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 		name: "关于",
 		url: "/about",
 		icon: "material-symbols:info",
-		],
 	});
 
 	// 文档链接
