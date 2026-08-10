@@ -5,7 +5,7 @@ pinned: false
 description: 自己的claude账号被封，看看能不能拯救一下，参考这个实践指南吧。
 tags: [claude, Ai]
 category: Ai
-image: ./images/claude-unban-guide.png
+image: ./images/claude-unban-guide.webp
 slug: claude-unban-guide
 ---
 
