@@ -55,7 +55,7 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 	links.push({
 		name: "关于",
 		url: "/about",
-		icon: "",
+		icon: "material-symbols:info",
 		],
 	});
 
