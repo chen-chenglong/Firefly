@@ -26,7 +26,7 @@ export const booknavPageConfig: BooknavPageConfig = {
 export const booknavConfig: BooknavGroup[] = [
 	{
 		id: "dev",
-		name: "开发",
+		name: "高频使用",
 		icon: "material-symbols:code-rounded",
 		desc: "经常使用到的，点开即用",
 		weight: 100,
