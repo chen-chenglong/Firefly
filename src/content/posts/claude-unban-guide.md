@@ -1,5 +1,5 @@
 ---
-title: 我是如何解锁自己被封的claude账号的参考指南
+title: 解锁自己被封的claude账号失败的参考指南
 published: 2026-08-08
 pinned: false
 description: 自己的claude账号被封，看看能不能拯救一下，参考这个实践指南吧。
@@ -46,6 +46,12 @@ Your account has been suspended
 
 根据界面提示，接下来就是排队等审核了，通常需要 10 天左右（Reviews take about 10 days）。
 
-提交后请留意你的注册邮箱，官方复核完成后会发送邮件告知处理结果。
+终于啊，2026年8月17日收到了官方的邮件：复审后决定不再恢复我的账号！   
 
-这个帖子先写到这等待更新进展...
+现在登录是彻底不行了：   
+![claude-unban-guide](./images/claude-unban-guide-04.png)  
+
+好吧，那不简单了，直接新注册一个账号，分分钟搞定，幸运的是之前的账号即便是被封也可以把数据导出，也没什么关键的数据，因此之前的账号直接删除了。   
+
+![claude-unban-guide](./images/claude-unban-guide-05.png)  
+完美新账号开搞！

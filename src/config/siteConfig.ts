@@ -50,7 +50,7 @@ export const siteConfig: SiteConfig = {
 	favicon: [
 		{
 			// 图标文件路径
-			src: "/favicon/logo.png",
+			src: "/favicon/favicon.ico",
 			// 可选，指定主题 'light' | 'dark'
 			// theme: "light",
 			// 可选，图标大小
@@ -97,7 +97,7 @@ export const siteConfig: SiteConfig = {
 	// 页面开关配置 - 控制特定页面的访问权限，设为false会返回404并自动隐藏对应的导航栏菜单项
 	pages: {
 		// 友链页面开关
-		friends: true,
+		friends: false,
 		// 打赏页面开关
 		sponsor: false,
 		// 留言板页面开关，需要配置评论系统
@@ -111,7 +111,7 @@ export const siteConfig: SiteConfig = {
 		// 追番页面开关
 		anime: false,
 		// 动态页面开关
-		dynamic: true,
+		dynamic: false,
 		// 书签导航页面开关
 		booknav: true,
 	},
