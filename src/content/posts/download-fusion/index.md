@@ -39,7 +39,7 @@ Autodesk账户是免费注册的！不需要任何费用，可以使用QQ邮箱�
 
 在公众号回复关键词：fusion
 
-![微信公众号](../public-wechat.webp)
+![微信公众号](/assets/images/public-wechat.webp)
 
 即可获得一个名为：Fusion Client Downloader.exe 的安装器，后看只需要双击这个文件，保持联网状态即可自己下载和安装。
 
