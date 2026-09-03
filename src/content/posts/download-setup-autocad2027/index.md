@@ -8,7 +8,7 @@ draft: false
 image: "https://cdn.jimuhaoke.com/2025/CAD%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85.webp"
 ---
 ### 第一步：下载安装包  
-关注微信公众号：陈成龙  
+关注微信公众号：A积木好课  
 回复关键词：CAD2027  
 ![微信公众号](../public-wechat.webp)
 ### 第二步：安装主程序  

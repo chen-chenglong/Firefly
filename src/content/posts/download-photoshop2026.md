@@ -17,9 +17,9 @@ image: "https://cdn.jimuhaoke.com/2025/ps.webp"
 
 即可获取高速下载安装包。
 
-公众号名称：积木好课
+公众号名称：A积木好课
 
-![微信扫码关注积木好课公众号](https://cdn.jimuhaoke.com/img/%E7%A7%AF%E6%9C%A8%E5%A5%BD%E8%AF%BE%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7.webp)
+![微信扫码关注积木好课公众号](/assets/images/public-wechat.webp)
 
 微信扫码关注积木好课公众号
 

@@ -20,7 +20,7 @@ chenglongchen#qq.com
 为了避开搜索引擎，#请替换为@
 
 ## 🌏微信公众号：  
-公众号名称：陈成龙  
+公众号名称：A积木好课 
 ![积木好课微信公众号](/assets/images/public-wechat.webp)
 
 ## 🧯远程协助  
