@@ -10,7 +10,7 @@ image: "https://cdn.jimuhaoke.com/2025/CAD%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85.w
 ### 第一步：下载安装包  
 关注微信公众号：A积木好课  
 回复关键词：CAD2027  
-![微信公众号](../public-wechat.webp)
+![微信公众号](/assets/images/public-wechat.webp)
 ### 第二步：安装主程序  
 下载解压后的文件，然后双击 Setup.exe 文件开始安装，弹出的窗口选择：是。  
 开许可界面，勾选我同意使用条款，然后点击下一步按钮  
