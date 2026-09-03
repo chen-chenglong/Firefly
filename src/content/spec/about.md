@@ -18,7 +18,7 @@ ajimuhaoke
 添加微信好友时请注明来源说明目的，谢谢。  
 
 ## ✉️站长邮箱：  
-shezhinicheng126@126.com  
+shezhinicheng@126.com  
 如有需要，也可以给我发送邮件。
 
 ## 🌏微信公众号：  
