@@ -21,9 +21,25 @@ ajimuhaoke
 国外的小伙伴也可以给我发送邮件。   
 shezhinicheng@126.com   
 
+<<<<<<< HEAD
 ## 🌏微信公众号：  
 公众号名称：A积木好课 
 ![积木好课微信公众号](/assets/images/public-wechat.webp)
+=======
+**📝Firefly使用文档： [https://docs-firefly.cuteleaf.cn](https://docs-firefly.cuteleaf.cn/)**
+
+**⭐Firefly开源地址：[https://github.com/CuteLeaf/Firefly](https://github.com/CuteLeaf/Firefly)** 
+
+**⭐Fuwari开源地址：[https://github.com/saicaca/fuwari](https://github.com/saicaca/fuwari)**
+
+::github{repo="CuteLeaf/Firefly"}
+
+::github{repo="saicaca/fuwari"}
+
+---
+
+*感谢你的来访！希望在这里能找到对你有用的内容！*
+>>>>>>> master
 
 ## 🧯远程协助  
 远程协助一般都是自己解决不了的复杂问题。
