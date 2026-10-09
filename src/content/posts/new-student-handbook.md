@@ -17,20 +17,18 @@ image: "/post/new-student-handbook/cover.webp"
 阅读后学习上基本不会再有问题。
 
 ### 📝技术答疑：
-我们提供终身免费的真人技术答疑，请添加微信老师：
+提供免费的真人答疑，请添加微信老师：
 
 站长微信号：
 
-17353351800   
+buxizhihouhao   
 
-ajimuhaoke
-
-复制以上手机号或者微信号，打开微信添加好友即可。   
+复制以上微信号，打开微信添加好友即可。   
 
 自愿添加，不需要答疑的可以不加。
 
-### 💻观看课程：
-课程在电脑、手机、平板均可以永久观看。
+### 💻观看课程的方法：
+课程可以在电脑、手机、平板永久观看。
 
 【1】使用电脑观看：
 
@@ -71,7 +69,7 @@ ajimuhaoke
 ### 💯好评支持：
 期待您的5星好评，这是我们坚持做好课程和服务的动力！谢谢。
 
-### 了解其他相关学习：
+### 其他课程的介绍：
 AutoCAD二维制图课程：
 
 [https://jimuhaoke.com/posts/autocad-2d-drafting-course/](https://jimuhaoke.com/posts/autocad-2d-drafting-course/)
