@@ -7,6 +7,8 @@ pinned: true
 tags: [CAD四级认证, CAD课程]
 category: 'AutoCAD课程'
 draft: false 
+series: "AutoCAD系统学习"
+seriesOrder: 4
 ---
 
 # 积木好课机械制图员四级技能认定考试视频教程
