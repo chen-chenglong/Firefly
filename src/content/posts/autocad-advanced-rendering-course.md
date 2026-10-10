@@ -7,6 +7,8 @@ category: AutoCAD课程
 pinned: true
 draft: false
 image: "https://cdn.jimuhaoke.com/2025/CAD%E6%B8%B2%E6%9F%93%E8%AF%BE%E7%A8%8B.webp"
+series: "AutoCAD系统学习"
+seriesOrder: 3
 ---
 这是原创AutoCAD字典式详解视频教程第三部分：AutoCAD高级渲染课程
 
